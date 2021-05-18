@@ -23,8 +23,8 @@ class ProductFactory extends Factory
     {
 
         return [
-            'name' => $this->faker->name(),
-            'slug' => $this->faker->word(),
+            'name' => $this->faker->bothify('?###??##'),
+            'slug' => $this->faker->bothify('?###??##'),
             'description' => $this->faker->text(),
             'price' => $this->faker->randomFloat(1, 20, 30),
             'status' => $this->faker->boolean()
