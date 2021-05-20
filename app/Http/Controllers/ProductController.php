@@ -46,9 +46,10 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function show(Product $product)
+    public function show($product_id)
     {
-        //
+        Product::find($product_id);
+        return Inertia::render('Product');
     }
 
     /**
